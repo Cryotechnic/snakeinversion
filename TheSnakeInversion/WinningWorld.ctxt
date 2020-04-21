@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=WinningWorld
+comment0.text=\r\n\ If\ the\ player\ gets\ to\ minimal\ length,\ and\ goes\ through\ a\ checkpoint,\ he\ goes\r\n\ to\ the\ winning\ world.\r\n\ @author\ Lisa,\ Ron,\ Dustin\r\n
+comment1.params=
+comment1.target=WinningWorld()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ WinningWorld.\r\n
+comment2.params=
+comment2.target=void\ act()
+numComments=3

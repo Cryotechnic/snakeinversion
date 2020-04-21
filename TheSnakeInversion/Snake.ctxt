@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Snake
+comment0.text=\r\n\ This\ is\ the\ snake\ actor\ that\ helps\ guide\ the\ actions\ for\ the\ rest\ of\ \r\n\ snake\ subactors.\r\n\ @author\ Lisa,\ Ron,\ Dustin\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Snake\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ hitObstacle()
+numComments=3
