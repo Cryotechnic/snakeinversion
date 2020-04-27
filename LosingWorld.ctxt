@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=LosingWorld
-comment0.text=\r\n\ If\ the\ player\ took\ too\ much\ damage,\ the\ player\ loses\ and\ comes\ to\ this\ world.\r\n\ @author\ Lisa,\ Ron,\ Dustin\ \r\n
+comment0.text=\n\ If\ the\ player\ took\ too\ much\ damage,\ the\ player\ loses\ and\ comes\ to\ this\ world.\n\ @author\ Lisa,\ Ron,\ Dustin\ \n
 comment1.params=
 comment1.target=LosingWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LosingWorld.\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ LosingWorld.\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3

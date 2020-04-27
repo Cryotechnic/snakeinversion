@@ -18,16 +18,16 @@ public class Blue extends Snake
         hitObstacle();
         move(4);
         if(Greenfoot.isKeyDown("left")) {
-            turn(-180);
+            setRotation(180);
         }
         if(Greenfoot.isKeyDown("right")) {
-            turn(180);
+            setRotation(0);
         }
         if(Greenfoot.isKeyDown("up")) {
-            turn(-90);
+            setRotation(270);
         }
         if(Greenfoot.isKeyDown("down")) {
-            turn(90);
+            setRotation(90);
         }
         
             
