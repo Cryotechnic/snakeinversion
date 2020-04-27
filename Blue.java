@@ -16,7 +16,7 @@ public class Blue extends Snake
     {
         // Add your action code here.
         hitObstacle();
-        move(4);
+        move(1);
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
