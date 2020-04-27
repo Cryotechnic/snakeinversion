@@ -24,10 +24,10 @@ public class Blue extends Snake
             turn(180);
         }
         if(Greenfoot.isKeyDown("up")) {
-            turn(90);
+            turn(-90);
         }
         if(Greenfoot.isKeyDown("down")) {
-            turn(-90);
+            turn(90);
         }
         
             
