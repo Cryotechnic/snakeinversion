@@ -8,16 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Blue extends Snake
 {
-    /**
-     * Act - do whatever the Blue wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int count;
+    
     public void act() 
     {
-        // Add your action code here.
+        count++;
+        getWorld().addObject(new Blue_tail(), getX(), getY());
         hitObstacle();
-        move(32);
-        Greenfoot.delay(50);
+        move(34);
+        Greenfoot.delay(5);
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
