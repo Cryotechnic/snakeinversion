@@ -12,12 +12,20 @@ public class Blue extends Snake
      * Act - do whatever the Blue wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public void moveAround(){
+        int originalX = getX();
+        int originalY = getY();
+        
+        if (isTouching(RWall.class)) {
+            setLocation(originalX, originalY); // FIXME: Add bump sound
+        }
+    }
+    
     public void act() 
     {
         // Add your action code here.
         hitObstacle();
         move(32);
-        Greenfoot.delay(25);
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
