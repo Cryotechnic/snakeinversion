@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Snake extends Actor
 {
     boolean touchingObstacle = false;
+    int maxcount = 10;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -16,9 +17,13 @@ public class Snake extends Actor
     {
         // Add your action code here.
     }    
-    
-    //This method is so that the snake loses health when it touches obstacles
-    //and dies when it has no more health.
+    public void hitCheckpoint(){
+        Actor checkP = getOneIntersectingObject(Checkpoint.class);
+        if(checkP != null){
+         maxcount--;
+         getWorld().removeObject(checkP);
+        }
+    }
     public void hitObstacle()
     {
         Actor lava = getOneIntersectingObject(Lava.class);

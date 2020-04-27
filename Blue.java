@@ -20,9 +20,9 @@ public class Blue extends Snake
     public void act() 
     {
         count++;
-        getWorld().addObject(new Blue_tail(), getX(), getY());
+        getWorld().addObject(new Blue_tail(maxcount), getX(), getY());
         hitObstacle();
-        
+        hitCheckpoint();
         move(34);
         Greenfoot.delay(5);
 
@@ -37,9 +37,6 @@ public class Blue extends Snake
         }
         if(Greenfoot.isKeyDown("down")) {
             setRotation(90);
-        }
-        
-            
+        } 
     }    
-    
 }
