@@ -22,11 +22,10 @@ public class Blue extends Snake
         count++;
         getWorld().addObject(new Blue_tail(), getX(), getY());
         hitObstacle();
-<<<<<<< HEAD
+        
         move(34);
         Greenfoot.delay(5);
-=======
-        move(32);
+
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
