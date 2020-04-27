@@ -9,13 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Red_Tail extends Snake
 {
    int count;
-   public Green_Tail(){
-        act();
+   int maxCount;
+   public Green_Tail(int max){
+       maxCount = max;
+       act();
     }
     public void act() 
     {
         count++;
-        if(count > 15){
+        if(count > maxCount){
             getWorld().removeObject(this);
         }
    }

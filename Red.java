@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Red extends Snake
 {
-        public void moveAround(){
+    int count;
+    public void moveAround(){
         int originalX = getX();
         int originalY = getY();
         
@@ -18,7 +19,24 @@ public class Red extends Snake
     }
     public void act() 
     {
-        // Add your action code here.
+        count++;
+        getWorld().addObject(new Red_Tail, getX(), getY());
         hitObstacle();
+        hitCheckpoint();
+        move(34);
+        Greenfoot.delay(5);
+        
+        if(Greenfoot.isKeyDown("left")) {
+            setRotation(180);
+        }
+        if(Greenfoot.isKeyDown("right")) {
+            setRotation(0);
+        }
+        if(Greenfoot.isKeyDown("up")) {
+            setRotation(270);
+        }
+        if(Greenfoot.isKeyDown("down")) {
+            setRotation(90);
+        } 
     }    
 }

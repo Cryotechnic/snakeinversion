@@ -22,7 +22,10 @@ public class Green extends Snake
         count++;
         getWorld().addObject(new Green_Tail(), getX(), getY());
         hitObstacle();
+        hitCheckpoint();
         move(4);
+        Greenfoot.delay(5);
+        
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
