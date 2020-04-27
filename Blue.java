@@ -37,6 +37,11 @@ public class Blue extends Snake
         }
         if(Greenfoot.isKeyDown("down")) {
             setRotation(90);
+<<<<<<< HEAD
         } 
+=======
+        }
+            
+>>>>>>> c822de528b72c43e9a66a0ceaf30069c63974c2a
     }    
 }
