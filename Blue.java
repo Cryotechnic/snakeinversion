@@ -16,6 +16,21 @@ public class Blue extends Snake
     {
         // Add your action code here.
         hitObstacle();
+        move(4);
+        if(Greenfoot.isKeyDown("left")) {
+            turn(-180);
+        }
+        if(Greenfoot.isKeyDown("right")) {
+            turn(180);
+        }
+        if(Greenfoot.isKeyDown("up")) {
+            turn(90);
+        }
+        if(Greenfoot.isKeyDown("down")) {
+            turn(-90);
+        }
+        
+            
     }    
     
 }
