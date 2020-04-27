@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=HealthBar
-comment0.text=\r\n\ If\ the\ health\ is\ at\ 0,\ the\ player\ loses.\ \r\n\ @author\ Lisa,\ Ron,\ Dustin\r\n
+comment0.text=\n\ If\ the\ health\ is\ at\ 0,\ the\ player\ loses.\ \n\ @author\ Lisa,\ Ron,\ Dustin\n
 comment1.params=
 comment1.target=HealthBar()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ HealthBar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ HealthBar\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
