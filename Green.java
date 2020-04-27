@@ -8,12 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Green extends Snake
 {
-    /**
-     * Act - do whatever the Green wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    int count;
+    public void moveAround(){
+        int originalX = getX();
+        int originalY = getY();
+        
+        if (isTouching(RWall.class)) {
+            setLocation(originalX, originalY); // FIXME: Add bump sound
+        }
+    }
     public void act() 
     {
+        count++;
+        getWorld().addObject(new Green_Tail(), getX(), getY());
         hitObstacle();
         move(4);
         if(Greenfoot.isKeyDown("left")) {
