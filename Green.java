@@ -20,7 +20,7 @@ public class Green extends Snake
     public void act() 
     {
         count++;
-        getWorld().addObject(new Green_Tail(), getX(), getY());
+        getWorld().addObject(new Green_Tail(maxcount), getX(), getY());
         hitObstacle();
         hitCheckpoint();
         move(4);

@@ -20,7 +20,7 @@ public class Red extends Snake
     public void act() 
     {
         count++;
-        getWorld().addObject(new Red_Tail, getX(), getY());
+        getWorld().addObject(new Red_Tail(maxcount), getX(), getY());
         hitObstacle();
         hitCheckpoint();
         move(34);

@@ -10,7 +10,7 @@ public class Red_Tail extends Snake
 {
    int count;
    int maxCount;
-   public Green_Tail(int max){
+   public Red_Tail(int max){
        maxCount = max;
        act();
     }

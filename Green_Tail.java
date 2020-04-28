@@ -11,13 +11,13 @@ public class Green_Tail extends Snake
    int count;
    int maxcount;
    public Green_Tail(int max){
-       maxCount = max;
+       maxcount = max;
        act();
     }
     public void act() 
     {
         count++;
-        if(count > maxCount){
+        if(count > maxcount){
             getWorld().removeObject(this);
         }
    }    
