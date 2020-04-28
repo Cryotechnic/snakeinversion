@@ -38,26 +38,23 @@ public class Blue extends Snake
         } 
     } 
     public void tailGen(){
-    count++;
+        count++;
+        Blue_tail tail = new Blue_tail(maxcount);
         if(getRotation() == 180){
-            Blue_tail tail = new Blue_tail(maxcount);
             getWorld().addObject(tail, getX(), getY());
             tail.setRotation(0);
             hitObstacle();
         }
         if(getRotation() == 0){
-            Blue_tail tail = new Blue_tail(maxcount);
             getWorld().addObject(tail, getX(), getY());
             tail.setRotation(180);
             hitObstacle();
         }
         if(getRotation() == 270){
-            Blue_tail tail = new Blue_tail(maxcount);
             getWorld().addObject(tail, getX(), getY());
             tail.setRotation(90);
             hitObstacle();
         }if(getRotation() == 90){
-            Blue_tail tail = new Blue_tail(maxcount);
             getWorld().addObject(tail, getX(), getY());
             tail.setRotation(270);
             hitObstacle();

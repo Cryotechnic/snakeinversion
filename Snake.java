@@ -9,6 +9,7 @@ public class Snake extends Actor
 {
     boolean touchingObstacle = false;
     int maxcount = 10;
+    int pointCount = 0;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

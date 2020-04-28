@@ -38,5 +38,29 @@ public class Red extends Snake
         if(Greenfoot.isKeyDown("down")) {
             setRotation(90);
         } 
-    }    
+    }
+    public void tailGen(){
+        count++;
+        Red_Tail tail = new Red_Tail(maxcount);
+        if(getRotation() == 180){
+            getWorld().addObject(tail, getX(), getY());
+            tail.setRotation(0);
+            hitObstacle();
+        }
+        if(getRotation() == 0){
+            getWorld().addObject(tail, getX(), getY());
+            tail.setRotation(90);
+            hitObstacle();
+        }
+        if(getRotation() == 270){
+            getWorld().addObject(tail, getX(), getY());
+            tail.setRotation(180);
+            hitObstacle();
+        }if(getRotation() == 90){
+            getWorld().addObject(tail, getX(), getY());
+            tail.setRotation(180);
+            hitObstacle();
+        }
+    }
 }
+
