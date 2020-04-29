@@ -69,4 +69,20 @@ public class Snake extends Actor
     public int getMaxcount(){
         return maxcount;
     }
+    public boolean isGameWon()
+    {
+
+        if (maxcount == 0){
+            return(true);
+        } 
+        return(false);
+    }
+    
+    public void detectVictory()
+    {
+        if (isGameWon() == true)
+        {
+            Greenfoot.setWorld(new WinningWorld());
+        }
+    }
 }

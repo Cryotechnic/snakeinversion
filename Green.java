@@ -21,6 +21,9 @@ public class Green extends Snake
     {
         tailGen();
         hitCheckpoint();
+        isGameWon();
+        hitObstacle();
+        detectVictory();
         move(34);
         Greenfoot.delay(5);
         
@@ -42,22 +45,19 @@ public class Green extends Snake
         Green_Tail tail = new Green_Tail(maxcount);
         if(getRotation() == 180){
             getWorld().addObject(tail, getX(), getY());
-            tail.setRotation(0);
-            hitObstacle();
+            tail.setRotation(0);            
         }
         if(getRotation() == 0){
             getWorld().addObject(tail, getX(), getY());
-            tail.setRotation(180);
-            hitObstacle();
+            tail.setRotation(180);            
         }
         if(getRotation() == 270){
             getWorld().addObject(tail, getX(), getY());
-            tail.setRotation(90);
-            hitObstacle();
-        }if(getRotation() == 90){
+            tail.setRotation(90);            
+        }
+        if(getRotation() == 90){
             getWorld().addObject(tail, getX(), getY());
-            tail.setRotation(270);
-            hitObstacle();
+            tail.setRotation(270);            
         }
     }
 }

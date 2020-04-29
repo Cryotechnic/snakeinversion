@@ -17,8 +17,10 @@ public class Blue_tail extends Snake
     public void act() 
     {
         count++;
-       if(count > maxCount){
-           getWorld().removeObject(this);
+        if(maxCount != 0){
+            if(count > maxCount){
+            getWorld().removeObject(this);
         }
+    }
     } 
 }
