@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Snake extends Actor
 {
     boolean touchingObstacle = false;
-    int maxcount = 2;
+    int maxcount = 10;
     int pointCount = 0;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
