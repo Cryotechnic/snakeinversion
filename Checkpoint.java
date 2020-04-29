@@ -6,14 +6,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Checkpoint extends Actor
+public class Checkpoint extends Snake
 {
-    /**
-     * Act - do whatever the Checkpoint wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        isGameWon();
+        detectVictory();
+    }   
+    
+    public boolean isGameWon()
+    {
+
+        if (maxcount == 1){
+            return true;
+        } 
+        return false;
+    }
+    
+    public void detectVictory()
+    {
+        if (isGameWon() == true)
+        {
+            Greenfoot.setWorld(new WinningWorld());
+        }
+    }
 }
