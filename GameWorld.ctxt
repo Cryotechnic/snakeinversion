@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\n\ GameWorld\ is\ where\ the\ actual\ game\ takes\ place.\ It\ can\ transition\ to\n\ either\ the\ losing,\ or\ winning\ world.\n\ @author\ Lisa,\ Ron,\ Dustin\n
+comment0.text=\r\n\ GameWorld\ is\ where\ the\ actual\ game\ takes\ place.\ It\ can\ transition\ to\r\n\ either\ the\ losing,\ or\ winning\ world.\r\n\ @author\ Lisa,\ Ron,\ Dustin\r\n
 comment1.params=
 comment1.target=GameWorld()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ GameWorld.\n\ \n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameWorld.\r\n\ \r\n
 comment2.params=
 comment2.target=HealthBar\ getHealthBar()
 comment3.params=
 comment3.target=void\ prepare()
-comment3.text=\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\n
+comment3.text=\r\n\ Prepare\ the\ world\ for\ the\ start\ of\ the\ program.\r\n\ That\ is\:\ create\ the\ initial\ objects\ and\ add\ them\ to\ the\ world.\r\n
 numComments=4

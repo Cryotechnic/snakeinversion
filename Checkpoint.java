@@ -10,8 +10,6 @@ public class Checkpoint extends Snake
 {
     public void act() 
     {
-        
+        //Act method here
     }   
-    
-    
 }

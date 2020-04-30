@@ -17,6 +17,7 @@ public class HealthBar extends Snake
     public HealthBar()
     {
         update();
+        loseHealth();
     }
     public void act() 
     {
