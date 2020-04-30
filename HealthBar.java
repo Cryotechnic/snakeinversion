@@ -6,19 +6,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class HealthBar extends Snake
 {
-    int health = 50;
-    int healthBarWidth = 250;
-    int healthBarHeight = 25;
-    int pixelsPerHealthPoint = (int)healthBarWidth/health;
+    int health;
+    int healthBarWidth;
+    int healthBarHeight;
+    int pixelsPerHealthPoint;
     /**
      * Act - do whatever the HealthBar wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public HealthBar()
-    {
-        update();
-        loseHealth();
+    public HealthBar(){
+        this.health = 50;
+        this.healthBarWidth = 250;
+        this.healthBarHeight = 25;
+        this.pixelsPerHealthPoint = (int)healthBarWidth/health;
     }
+    
+    
     public void act() 
     {
         update();

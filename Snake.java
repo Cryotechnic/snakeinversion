@@ -16,7 +16,7 @@ public class Snake extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+        
     }    
     public void hitCheckpoint(){
         Actor checkP = getOneIntersectingObject(Checkpoint.class);
@@ -25,22 +25,18 @@ public class Snake extends Actor
          getWorld().removeObject(checkP);
         }
     }
-    public void hitObstacle()
+    public void hitObstacle(HealthBar healthBar)
     {
         Actor lava = getOneIntersectingObject(Lava.class);
         if(lava != null)
         {
             World gameWorld = getWorld();
             GameWorld space = (GameWorld)gameWorld;
-            HealthBar healthBar = space.getHealthBar();
+            healthBar.loseHealth();
+            healthBar.update();
             if(touchingObstacle == false)
             {
-                healthBar.loseHealth();
                 touchingObstacle = true;
-                if(healthBar.health == 0)
-                {
-                    Greenfoot.setWorld(new LosingWorld());
-                }
             }
         } else {
             touchingObstacle = false;
@@ -51,7 +47,6 @@ public class Snake extends Actor
         {
             World gameWorld = getWorld();
             GameWorld space = (GameWorld)gameWorld;
-            HealthBar healthBar = space.getHealthBar();
             if(touchingObstacle == false)
             {
                 healthBar.loseHealth();
@@ -69,6 +64,14 @@ public class Snake extends Actor
     public int getMaxcount(){
         return maxcount;
     }
+    
+    public void isGameLost(HealthBar healthBar){
+        if(healthBar.health == 0)
+                {
+                    Greenfoot.setWorld(new LosingWorld());
+                }
+    }
+    
     public boolean isGameWon()
     {
 

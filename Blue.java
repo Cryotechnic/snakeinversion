@@ -9,6 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Blue extends Snake
 {
     int count;
+    HealthBar healthBar = new HealthBar();
+    
+    public Blue(){
+        
+    }
     public void moveAround(){
         int originalX = getX();
         int originalY = getY();
@@ -19,10 +24,13 @@ public class Blue extends Snake
     }
     public void act() 
     {
+        getWorld().addObject(healthBar,200,30);
+        healthBar.update();
         tailGen();
         hitCheckpoint();
         isGameWon();
-        hitObstacle();
+        isGameLost(healthBar);
+        hitObstacle(healthBar);
         detectVictory();
         move(34);
         Greenfoot.delay(5);

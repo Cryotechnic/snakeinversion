@@ -24,12 +24,13 @@ public class GameWorld extends World
    {
        return healthBar;
    }
-   /**
-    * Prepare the world for the start of the program.
-    * That is: create the initial objects and add them to the world.
-    */
-   private void prepare()
-   {
+   
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
         DLCornerWall dLCornerWall = new DLCornerWall();
         addObject(dLCornerWall,63,636);
         DRCornerWall dRCornerWall = new DRCornerWall();
@@ -402,5 +403,9 @@ public class GameWorld extends World
         addObject(uWall13,636,62);
         UWall uWall14 = new UWall();
         addObject(uWall14,752,62);
+
+        Blue blue5 = new Blue();
+        addObject(blue5,328,472);
+        removeObject(healthBar2);
     }
 }
