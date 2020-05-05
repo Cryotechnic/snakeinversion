@@ -10,18 +10,17 @@ public class GameMenu extends World
     int snakeLength = 10;
     String snakeColor = "Blue";
     int snakeColorNum = 1;
-
+    GreenfootSound gameMenu;
     public GameMenu()
     {    
         // Create a new world with 600x450 cells with a cell size of 1x1 pixels.
         super(600, 450, 1);
         setBackground("GameMenu.PNG");
-        
+        gameMenu = new GreenfootSound("gameMenu.mp3");
     }
 
     public void act()
     {
-        GreenfootSound gameMenu = new GreenfootSound("gameMenu.mp3");
         if(!position){
             if(Greenfoot.isKeyDown("left")){
                 if(snakeLength > 2){
