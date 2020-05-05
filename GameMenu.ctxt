@@ -1,9 +1,8 @@
 #BlueJ class context
 comment0.target=GameMenu
-comment0.text=\r\n\ GameMenu\ gives\ the\ options\ for\ the\ user\r\n\ @author\ Lisa,\ Ron,\ Dustin\ \r\n
+comment0.text=\n\ GameMenu\ gives\ the\ options\ for\ the\ user\n\ @author\ Lisa,\ Ron,\ Dustin\ \n
 comment1.params=
 comment1.target=GameMenu()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameMenu.\r\n
 comment2.params=
 comment2.target=void\ act()
 numComments=3
