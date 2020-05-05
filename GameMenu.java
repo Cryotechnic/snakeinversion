@@ -14,13 +14,14 @@ public class GameMenu extends World
     public GameMenu()
     {    
         // Create a new world with 600x450 cells with a cell size of 1x1 pixels.
-        super(600, 450, 1); 
+        super(600, 450, 1);
         setBackground("GameMenu.PNG");
         
     }
 
     public void act()
     {
+        GreenfootSound gameMenu = new GreenfootSound("gameMenu.mp3");
         if(!position){
             if(Greenfoot.isKeyDown("left")){
                 if(snakeLength > 2){
@@ -64,7 +65,7 @@ public class GameMenu extends World
         {
             Greenfoot.setWorld(new GameWorld());
         }
-
+        gameMenu.playLoop();
         GreenfootImage bg = getBackground();
         Font font = new Font(50);
         bg.setFont(font);
