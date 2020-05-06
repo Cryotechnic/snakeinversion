@@ -12,9 +12,11 @@ public class Red extends Snake
     int maxcount;
     HealthBar healthBar = new HealthBar();
     GreenfootSound bumping;
+    GreenfootSound gameMusic;
     public Red(int length){
         maxcount = length;
         bumping = new GreenfootSound("bumping.wav");
+        gameMusic = new GreenfootSound("gameplaySound.wav");
     }
    
     public void hitCheckpoint(){
@@ -29,6 +31,7 @@ public class Red extends Snake
     {
 
         if (maxcount == 0){
+            gameMusic.stop();
             return(true);
         } 
         return(false);
@@ -45,7 +48,8 @@ public class Red extends Snake
         int originalY = getY();
         
         if (isTouching(RWall.class)) {
-            setLocation(originalX, originalY); // FIXME: Add bump sound
+            setLocation(originalX, originalY);
+            // FIXME: Add bump sound
         }
     }
     public void act() 
@@ -61,7 +65,7 @@ public class Red extends Snake
         move(34);
         Greenfoot.delay(5);
         checkGen();
-        
+        gameMusic.playLoop();
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
