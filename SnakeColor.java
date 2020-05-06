@@ -11,7 +11,7 @@ public class SnakeColor extends Actor
     String myColor;
     public SnakeColor() 
     {
-        setImage(new GreenfootImage("blue", 20, Color.YELLOW, Color.BLACK));
+        setImage(new GreenfootImage("Blue", 20, Color.YELLOW, Color.BLACK));
     }
     public void setColor(String color){
         myColor = color;

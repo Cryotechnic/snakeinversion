@@ -24,7 +24,7 @@ public class Red extends Snake
         if(checkP != null){
          maxcount--;
          getWorld().removeObject(checkP);
-         bumping.play();
+         //bumping.play();
         }
     }
     public boolean isGameWon()
@@ -40,6 +40,7 @@ public class Red extends Snake
     {
         if (isGameWon() == true)
         {
+            
             Greenfoot.setWorld(new WinningWorld());
         }
     }
