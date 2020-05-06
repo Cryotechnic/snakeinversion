@@ -76,8 +76,8 @@ public class GameMenu extends World
         }
         if(Greenfoot.isKeyDown("D"))
         {
-            Greenfoot.setWorld(new GameWorld());
-            snake.setLength(snakeLength);
+            Greenfoot.setWorld(new GameWorld(snakeColor,snakeLength));
+           
         }
         gameMenu.playLoop();
         

@@ -10,9 +10,9 @@ public class Blue extends Snake
 {
     int count;
     HealthBar healthBar = new HealthBar();
-    
-    public Blue(){
-        
+    int maxcount;
+    public Blue(int length){
+        maxcount = length;
     }
     public void moveAround(){
         int originalX = getX();
@@ -20,6 +20,28 @@ public class Blue extends Snake
         
         if (isTouching(RWall.class)) {
             setLocation(originalX, originalY); // FIXME: Add bump sound
+        }
+    }
+    public void hitCheckpoint(){
+        Actor checkP = getOneIntersectingObject(Checkpoint.class);
+        if(checkP != null){
+         maxcount--;
+         getWorld().removeObject(checkP);
+        }
+    }
+    public boolean isGameWon()
+    {
+
+        if (maxcount == 0){
+            return(true);
+        } 
+        return(false);
+    }
+    public void detectVictory()
+    {
+        if (isGameWon() == true)
+        {
+            Greenfoot.setWorld(new WinningWorld());
         }
     }
     public void act() 

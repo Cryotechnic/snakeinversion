@@ -13,16 +13,26 @@ public class GameWorld extends World
     * Constructor for objects of class GameWorld.
     * 
    */
-   public GameWorld()
+   
+   public GameWorld(String color, int length)
    {    
        // Create a new world with 900x700 cells with a cell size of 1x1pixels.
-       super(900, 700, 1); 
+       
+       super(900, 700, 1);
+       makeSnake(color, length);
        prepare();
    }
     
    public HealthBar getHealthBar()
    {
        return healthBar;
+   }
+   public void makeSnake(String color, int length){
+       
+       if(color.equals("blue")){
+           Blue blue = new Blue(length);
+           addObject(blue, 100, 200);
+        }
    }
    
     /**
@@ -31,6 +41,7 @@ public class GameWorld extends World
      */
     private void prepare()
     {
+        
         DLCornerWall dLCornerWall = new DLCornerWall();
         addObject(dLCornerWall,63,636);
         DRCornerWall dRCornerWall = new DRCornerWall();
@@ -183,13 +194,7 @@ public class GameWorld extends World
         addObject(rWall5,837,172);
         spikes7.setLocation(758,255);
         spikes4.setLocation(457,565);
-        Blue blue = new Blue();
-        addObject(blue,332,459);
         lava7.setLocation(399,116);
-        removeObject(blue);
-        Blue blue2 = new Blue();
-        addObject(blue2,488,463);
-        blue2.setLocation(528,468);
         spikes7.setLocation(782,249);
         rWall2.setLocation(779,267);
         rWall2.setLocation(776,257);
@@ -206,12 +211,8 @@ public class GameWorld extends World
         addObject(spikes8,786,588);
         lava3.setLocation(696,541);
         lava3.setLocation(671,513);
-        blue2.setLocation(432,375);
         lava3.setLocation(626,479);
-        blue2.setLocation(448,427);
-        blue2.setLocation(382,472);
         lava6.setLocation(480,391);
-        removeObject(blue2);
         Checkpoint checkpoint = new Checkpoint();
         addObject(checkpoint,596,301);
         Checkpoint checkpoint2 = new Checkpoint();
@@ -221,13 +222,10 @@ public class GameWorld extends World
         addObject(checkpoint3,712,584);
         Checkpoint checkpoint4 = new Checkpoint();
         addObject(checkpoint4,267,464);
-        Blue blue3 = new Blue();
-        addObject(blue3,450,473);
         lava2.setLocation(620,186);
         checkpoint4.setLocation(276,466);
         removeObject(checkpoint4);
         removeObject(checkpoint2);
-        removeObject(blue3);
         dWall5.setLocation(698,590);
         removeObject(checkpoint3);
         removeObject(checkpoint);
@@ -403,9 +401,6 @@ public class GameWorld extends World
         addObject(uWall13,636,62);
         UWall uWall14 = new UWall();
         addObject(uWall14,752,62);
-
-        Blue blue5 = new Blue();
-        addObject(blue5,328,472);
         removeObject(healthBar2);
     }
 }

@@ -9,7 +9,7 @@ public class Snake extends Actor
 {
     boolean touchingObstacle = false;
     
-    int maxcount;
+    
     int pointCount = 0;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
@@ -19,16 +19,8 @@ public class Snake extends Actor
     {
         
     }
-    public void setLength(int length){
-        maxcount = length;
-    }
-    public void hitCheckpoint(){
-        Actor checkP = getOneIntersectingObject(Checkpoint.class);
-        if(checkP != null){
-         maxcount--;
-         getWorld().removeObject(checkP);
-        }
-    }
+    
+    
     public void hitObstacle(HealthBar healthBar)
     {
         Actor lava = getOneIntersectingObject(Lava.class);
@@ -65,10 +57,8 @@ public class Snake extends Actor
         }
     }
     
-    public int getMaxcount(){
-        return maxcount;
-    }
     
+ 
     public void isGameLost(HealthBar healthBar){
         if(healthBar.health == 0)
                 {
@@ -76,20 +66,7 @@ public class Snake extends Actor
                 }
     }
     
-    public boolean isGameWon()
-    {
-
-        if (maxcount == 0){
-            return(true);
-        } 
-        return(false);
-    }
     
-    public void detectVictory()
-    {
-        if (isGameWon() == true)
-        {
-            Greenfoot.setWorld(new WinningWorld());
-        }
-    }
+    
+    
 }
