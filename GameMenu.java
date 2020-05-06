@@ -59,7 +59,7 @@ public class GameMenu extends World
                 }
             }  
         }
-        
+        gameMenu.playLoop();
         if(snakeColorNum == 1){
             snakeColor = "Blue";
         }
@@ -77,9 +77,10 @@ public class GameMenu extends World
         if(Greenfoot.isKeyDown("D"))
         {
             Greenfoot.setWorld(new GameWorld(snakeColor,snakeLength));
+            gameMenu.stop();
            
         }
-        gameMenu.playLoop();
+        
         
     }
     
