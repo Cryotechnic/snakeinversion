@@ -61,7 +61,7 @@ public class GameMenu extends World
         }
         
         if(snakeColorNum == 1){
-            snakeColor = "blue";
+            snakeColor = "Blue";
         }
         if(snakeColorNum == 2){
             snakeColor = "Green";

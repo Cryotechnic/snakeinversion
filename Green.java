@@ -9,13 +9,39 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Green extends Snake
 {
     int count;
+    int maxcount;
     HealthBar healthBar = new HealthBar();
+    public Green(int length){
+        maxcount = length;
+    }
     public void moveAround(){
         int originalX = getX();
         int originalY = getY();
         
         if (isTouching(RWall.class)) {
             setLocation(originalX, originalY); // FIXME: Add bump sound
+        }
+    }
+    public void hitCheckpoint(){
+        Actor checkP = getOneIntersectingObject(Checkpoint.class);
+        if(checkP != null){
+         maxcount--;
+         getWorld().removeObject(checkP);
+        }
+    }
+    public boolean isGameWon()
+    {
+
+        if (maxcount == 0){
+            return(true);
+        } 
+        return(false);
+    }
+    public void detectVictory()
+    {
+        if (isGameWon() == true)
+        {
+            Greenfoot.setWorld(new WinningWorld());
         }
     }
     public void act() 

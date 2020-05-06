@@ -19,8 +19,9 @@ public class GameWorld extends World
        // Create a new world with 900x700 cells with a cell size of 1x1pixels.
        
        super(900, 700, 1);
-       makeSnake(color, length);
        prepare();
+       makeSnake(color, length);
+       
    }
     
    public HealthBar getHealthBar()
@@ -29,9 +30,17 @@ public class GameWorld extends World
    }
    public void makeSnake(String color, int length){
        
-       if(color.equals("blue")){
+       if(color.equals("Blue")){
            Blue blue = new Blue(length);
-           addObject(blue, 100, 200);
+           addObject(blue, 190, 463);
+        }
+        if(color.equals("Green")){
+           Green green = new Green(length);
+           addObject(green, 190, 463);
+        }
+        if(color.equals("Red")){
+           Red red = new Red(length);
+           addObject(red, 190, 463);
         }
    }
    
