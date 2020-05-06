@@ -50,7 +50,7 @@ public class GameWorld extends World
      */
     private void prepare()
     {
-        
+
         DLCornerWall dLCornerWall = new DLCornerWall();
         addObject(dLCornerWall,63,636);
         DRCornerWall dRCornerWall = new DRCornerWall();
@@ -411,5 +411,10 @@ public class GameWorld extends World
         UWall uWall14 = new UWall();
         addObject(uWall14,752,62);
         removeObject(healthBar2);
+        checkpoint6.setLocation(199,371);
+        checkpoint6.setLocation(272,423);
+        removeObject(checkpoint6);
+        checkpoint5.setLocation(679,237);
+        removeObject(checkpoint5);
     }
 }

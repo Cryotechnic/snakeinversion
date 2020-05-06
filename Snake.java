@@ -9,7 +9,6 @@ public class Snake extends Actor
 {
     boolean touchingObstacle = false;
     
-    
     int pointCount = 0;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
@@ -17,6 +16,17 @@ public class Snake extends Actor
      */
     public void act() 
     {
+        
+    }
+    public void checkGen(){
+        Checkpoint checkpoint = new Checkpoint();
+        World world = getWorld();
+        int x = Greenfoot.getRandomNumber(900);
+        int y = Greenfoot.getRandomNumber(700);
+        if (world.getObjects(Checkpoint.class).isEmpty()){
+            getWorld().addObject(checkpoint, x, y);
+        }
+        
         
     }
     

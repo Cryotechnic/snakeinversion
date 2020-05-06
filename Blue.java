@@ -11,6 +11,7 @@ public class Blue extends Snake
     int count;
     HealthBar healthBar = new HealthBar();
     int maxcount;
+    
     public Blue(int length){
         maxcount = length;
     }
@@ -56,6 +57,7 @@ public class Blue extends Snake
         detectVictory();
         move(34);
         Greenfoot.delay(5);
+        checkGen();
 
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
@@ -90,4 +92,5 @@ public class Blue extends Snake
             tail.setRotation(270);
         }
     }
+    
 }
