@@ -21,8 +21,14 @@ public class Snake extends Actor
     public void checkGen(){
         Checkpoint checkpoint = new Checkpoint();
         World world = getWorld();
-        int x = Greenfoot.getRandomNumber(900);
-        int y = Greenfoot.getRandomNumber(700);
+        int x = Greenfoot.getRandomNumber(813);
+        if(x < 90){
+            x = 90;
+        }
+        int y = Greenfoot.getRandomNumber(610);
+        if(y < 90){
+            y = 90;
+        }
         if (world.getObjects(Checkpoint.class).isEmpty()){
             getWorld().addObject(checkpoint, x, y);
         }
