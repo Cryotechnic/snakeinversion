@@ -9,6 +9,7 @@ public class GameWorld extends World
 {
    private int counter;
    HealthBar healthBar = new HealthBar();
+   GreenfootSound gameplaySound;
    /**
     * Constructor for objects of class GameWorld.
     * 
@@ -21,7 +22,6 @@ public class GameWorld extends World
        super(900, 700, 1);
        prepare();
        makeSnake(color, length);
-       
    }
     
    public HealthBar getHealthBar()
