@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SnakeLength
+comment0.text=\n\ Write\ a\ description\ of\ class\ SnakeLength\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=SnakeLength()
+comment2.params=length
+comment2.target=void\ setLength(int)
+comment3.params=
+comment3.target=int\ getLength()
+numComments=4

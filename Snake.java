@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Snake extends Actor
 {
     boolean touchingObstacle = false;
-    int maxcount = 10;
+    
+    int maxcount;
     int pointCount = 0;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
@@ -17,7 +18,10 @@ public class Snake extends Actor
     public void act() 
     {
         
-    }    
+    }
+    public void setLength(int length){
+        maxcount = length;
+    }
     public void hitCheckpoint(){
         Actor checkP = getOneIntersectingObject(Checkpoint.class);
         if(checkP != null){
