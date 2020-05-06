@@ -11,8 +11,10 @@ public class Red extends Snake
     int count;
     int maxcount;
     HealthBar healthBar = new HealthBar();
+    GreenfootSound bumping;
     public Red(int length){
         maxcount = length;
+        bumping = new GreenfootSound("bumping.wav");
     }
    
     public void hitCheckpoint(){
@@ -20,6 +22,7 @@ public class Red extends Snake
         if(checkP != null){
          maxcount--;
          getWorld().removeObject(checkP);
+         bumping.play();
         }
     }
     public boolean isGameWon()
