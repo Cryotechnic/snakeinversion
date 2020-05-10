@@ -75,20 +75,13 @@ public class Snake extends Actor
             touchingObstacle = false;
         }
     }
-    
-    
- 
     public void isGameLost(HealthBar healthBar){
         GreenfootSound lostGame;
         lostGame = new GreenfootSound("lostGame.mp3");
         if(healthBar.health == 0)
-                {
-                    lostGame.play();
-                    Greenfoot.setWorld(new LosingWorld());
-                }
+        {
+         
+            Greenfoot.setWorld(new LosingWorld());
+        }
     }
-    
-    
-    
-    
 }
