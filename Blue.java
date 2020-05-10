@@ -12,16 +12,18 @@ public class Blue extends Snake
     HealthBar healthBar = new HealthBar();
     int maxcount;
     GreenfootSound bumping;
+    GreenfootSound gameMusic;
     public Blue(int length){
         maxcount = length;
         bumping = new GreenfootSound("bumping.wav");
+        gameMusic = new GreenfootSound("gameplaySound.wav");
     }
     public void moveAround(){
         int originalX = getX();
         int originalY = getY();
         
         if (isTouching(RWall.class)) {
-            setLocation(originalX, originalY); // FIXME: Add bump sound
+            setLocation(originalX, originalY);
         }
     }
     public void hitCheckpoint(){
@@ -36,6 +38,7 @@ public class Blue extends Snake
     {
 
         if (maxcount == 0){
+            gameMusic.stop();
             return(true);
         } 
         return(false);
@@ -50,6 +53,7 @@ public class Blue extends Snake
     public void act() 
     {
         getWorld().addObject(healthBar,200,30);
+        gameMusic.playLoop();
         healthBar.update();
         tailGen();
         hitCheckpoint();

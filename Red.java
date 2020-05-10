@@ -17,7 +17,6 @@ public class Red extends Snake
         maxcount = length;
         bumping = new GreenfootSound("bumping.wav");
         gameMusic = new GreenfootSound("gameplaySound.wav");
-
     }
    
     public void hitCheckpoint(){
