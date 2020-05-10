@@ -13,10 +13,12 @@ public class Blue extends Snake
     int maxcount;
     GreenfootSound bumping;
     GreenfootSound gameMusic;
+    GreenfootSound victorySound;
     public Blue(int length){
         maxcount = length;
         bumping = new GreenfootSound("bumping.wav");
         gameMusic = new GreenfootSound("gameplaySound.wav");
+        victorySound = new GreenfootSound("victorySound.wav");
     }
     public void moveAround(){
         int originalX = getX();
@@ -39,6 +41,7 @@ public class Blue extends Snake
 
         if (maxcount == 0){
             gameMusic.stop();
+            victorySound.play();
             return(true);
         } 
         return(false);

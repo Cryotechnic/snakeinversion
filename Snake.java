@@ -39,6 +39,8 @@ public class Snake extends Actor
     
     public void hitObstacle(HealthBar healthBar)
     {
+        GreenfootSound lostGame;
+        lostGame = new GreenfootSound("lostGame.mp3");
         Actor lava = getOneIntersectingObject(Lava.class);
         if(lava != null)
         {
@@ -65,6 +67,7 @@ public class Snake extends Actor
                 touchingObstacle = true;
                 if(healthBar.health == 0)
                 {
+                    lostGame.play();
                     Greenfoot.setWorld(new LosingWorld());
                 }
             }
@@ -76,8 +79,11 @@ public class Snake extends Actor
     
  
     public void isGameLost(HealthBar healthBar){
+        GreenfootSound lostGame;
+        lostGame = new GreenfootSound("lostGame.mp3");
         if(healthBar.health == 0)
                 {
+                    lostGame.play();
                     Greenfoot.setWorld(new LosingWorld());
                 }
     }
