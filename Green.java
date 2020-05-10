@@ -50,6 +50,13 @@ public class Green extends Snake
             Greenfoot.setWorld(new WinningWorld());
         }
     }
+    public void isGameLost(HealthBar healthBar){
+        if(healthBar.health == 0)
+        {
+            gameMusic.stop();
+            Greenfoot.setWorld(new LosingWorld());    
+        }
+    }
     public void act() 
     {
         getWorld().addObject(healthBar,200,30);

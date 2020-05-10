@@ -42,6 +42,13 @@ public class Red extends Snake
             Greenfoot.setWorld(new WinningWorld());
         }
     }
+    public void isGameLost(HealthBar healthBar){
+        if(healthBar.health == 0)
+        {
+            gameMusic.stop();
+            Greenfoot.setWorld(new LosingWorld());    
+        }
+    }
     public void moveAround(){
         int originalX = getX();
         int originalY = getY();

@@ -72,17 +72,11 @@ public class Snake extends Actor
             touchingObstacle = false;
         }
     }
-    
-    
- 
     public void isGameLost(HealthBar healthBar){
         if(healthBar.health == 0)
-                {
-                    Greenfoot.setWorld(new LosingWorld());
-                }
+        {
+         
+            Greenfoot.setWorld(new LosingWorld());
+        }
     }
-    
-    
-    
-    
 }
