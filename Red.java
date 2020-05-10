@@ -17,6 +17,7 @@ public class Red extends Snake
         maxcount = length;
         bumping = new GreenfootSound("bumping.wav");
         gameMusic = new GreenfootSound("gameplaySound.wav");
+
     }
    
     public void hitCheckpoint(){
@@ -24,12 +25,11 @@ public class Red extends Snake
         if(checkP != null){
          maxcount--;
          getWorld().removeObject(checkP);
-         //bumping.play();
+         bumping.play();
         }
     }
     public boolean isGameWon()
     {
-
         if (maxcount == 0){
             gameMusic.stop();
             return(true);
@@ -40,7 +40,6 @@ public class Red extends Snake
     {
         if (isGameWon() == true)
         {
-            
             Greenfoot.setWorld(new WinningWorld());
         }
     }
@@ -56,6 +55,7 @@ public class Red extends Snake
     public void act() 
     {
         getWorld().addObject(healthBar,200,30);
+        gameMusic.playLoop();
         healthBar.update();
         tailGen();
         hitCheckpoint();
@@ -66,7 +66,6 @@ public class Red extends Snake
         move(34);
         Greenfoot.delay(5);
         checkGen();
-        gameMusic.playLoop();
         if(Greenfoot.isKeyDown("left")) {
             setRotation(180);
         }
