@@ -11,7 +11,6 @@ public class Snake extends Actor
     
     int pointCount = 0;
     
-    GreenfootSound gameMusic;
     /**
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -77,10 +76,8 @@ public class Snake extends Actor
     
  
     public void isGameLost(HealthBar healthBar){
-        gameMusic = new GreenfootSound("gameplaySound.wav");
         if(healthBar.health == 0)
                 {
-                    gameMusic.pause();
                     Greenfoot.setWorld(new LosingWorld());
                 }
     }
